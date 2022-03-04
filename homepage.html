@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>My Website</title>
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="header">My Website
+        </div>
+        <div class="menu">
+            <h2>Navigation</h2>
+            <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </div>
+        <div class="mainContent">
+            <h1>Home page</h1>
+            <div id="app"></div>
+        </div>
+        <div class="footer">Copyright blablabla</div>
+    </div>
+
+    <script>
+
+        //model
+
+        const weeks = ['<a href="https://bengetacademy.github.io/Getacademy/Moodle/teamoppgave.html">Week 3</a>',
+            '<a href="https://bengetacademy.github.io/Getacademy/Moodle/teamoppgave_uke4.html">Week 4</a>',
+            '<a href="https://tompaagetgit.github.io/SteinSaksPapir.html">Week 5</a>',
+            '<a href="https://scarecrow2905.github.io/TeamOppgaveMorse/index.html">Week 6</a>',
+            '<a href="https://danz1337z.github.io/team-oppgave/team-oppgave/">Week 7</a>',
+            '<a href="https://davulz.github.io/Teamoppgave6Gruppe2/">Week 8</a>'];
+
+        //view
+
+        show()
+        function show() {
+            let html = '';
+            let newName = '';
+
+            for (let i = 0; i < weeks.length; i++) {
+                html += /*html*/`
+        <div>${weeks[i]}</div>
+        <div>Project ${i + 1}</div>
+        <hr>
+        `;
+            }
+
+            document.getElementById('app').innerHTML = html;
+
+        }
+
+        //controlller
+
+        function goTo(index) {
+            projects[index]
+        }
+
+    </script>
+</body>
+
+</html>
